@@ -8,30 +8,30 @@ const pear = new Item('pear', 1.99, 'asian pear') //Item A
 const banana = new Item('banana', 0.25, 'yellow banana')//Item B
 const cake = new Item('cake', 15.99, 'the cake is a lie')//Item C
 
-user.addToCart(user,pear,1)
-user.printCart(user)
-user.cartTotal(user)
+user.addToCart(pear,1)
+user.printCart()
+user.cartTotal()
 
 console.log('');
 
-user.addToCart(user,banana,3)
-user.printCart(user)
-user.cartTotal(user)
+user.addToCart(banana,3)
+user.printCart()
+user.cartTotal()
 
 console.log('');
 
-user.addToCart(user,cake,3)
-user.printCart(user)
-user.cartTotal(user)
+user.addToCart(cake,3)
+user.printCart()
+user.cartTotal()
 
 console.log('');
 
-user.removeFromCart(user,banana)
-user.printCart(user)
-user.cartTotal(user)
+user.removeFromCart(banana)
+user.printCart()
+user.cartTotal()
 
 console.log('');
 
-user.removeQuantityFromCart(user,cake,2)
-user.printCart(user)
-user.cartTotal(user)
+user.removeQuantityFromCart(cake,2)
+user.printCart()
+user.cartTotal()
