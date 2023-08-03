@@ -4,6 +4,8 @@ import Item from './Item'
 
 
 export default class User {
+  public readonly id: string = uuidv4()
+
   public get cart(): Item[] {
     return this._cart
   }
@@ -22,7 +24,7 @@ export default class User {
   public set name(value: string) {
     this._name = value
   }
-  public readonly id: string = uuidv4()
+  
   constructor(
     private _name: string,
     private _age: number,
@@ -31,10 +33,6 @@ export default class User {
       this._age = _age,
       this._cart = _cart
     }
-  
-  displayUser(): void{
-    console.log(this.name, this.age, this.cart, this.id)
-  }
   
   addToCart(item: Item, qty: number): void{
     for (let i = 0; i < qty; i++){
